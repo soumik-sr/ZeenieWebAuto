@@ -1,0 +1,472 @@
+/* --- PURITY PAGE STYLING --- */
+
+.purity-hero {
+  background-color: var(--bg-frosted);
+  padding: 8rem 0 4rem;
+  border-bottom: 1px solid var(--bg-soft-blue);
+}
+
+/* --- MINERAL DASHBOARD --- */
+.dashboard-section {
+  background-color: var(--bg-glacier);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 5rem;
+  align-items: flex-start;
+}
+
+.dashboard-intro {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* Mineral Selection Buttons */
+.mineral-buttons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mineral-selection-btn {
+  background: var(--bg-glacier);
+  border: 1px solid var(--bg-soft-blue);
+  padding: 1.2rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.mineral-selection-btn:hover {
+  border-color: var(--accent-platinum);
+  transform: translateX(5px);
+}
+
+.mineral-selection-btn.active {
+  border-color: var(--text-abyssal);
+  background-color: var(--bg-frosted);
+  box-shadow: 0 10px 25px rgba(11, 17, 22, 0.03);
+}
+
+.btn-inner-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.droplet-icon {
+  color: var(--accent-platinum);
+  transition: var(--transition-fast);
+}
+
+.mineral-selection-btn.active .droplet-icon {
+  color: var(--accent-gold-dark);
+}
+
+.btn-text-col {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.btn-text-col strong {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-abyssal);
+  margin-bottom: 0.2rem;
+}
+
+.btn-text-col span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.btn-arrow {
+  font-size: 1.1rem;
+  color: var(--accent-platinum);
+  transition: var(--transition-fast);
+}
+
+.mineral-selection-btn.active .btn-arrow {
+  color: var(--text-abyssal);
+  transform: translateX(3px);
+}
+
+/* Active Mineral Panel */
+.dashboard-active-panel {
+  background-color: var(--bg-frosted);
+  border: 1px solid var(--bg-soft-blue);
+  border-radius: 8px;
+  padding: 3rem;
+  box-shadow: 0 15px 40px rgba(11, 17, 22, 0.03);
+}
+
+.active-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--bg-soft-blue);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.panel-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.chemical-symbol {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--accent-gold-dark);
+  background-color: var(--bg-glacier);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--bg-soft-blue);
+  box-shadow: 0 6px 15px rgba(11, 17, 22, 0.02);
+}
+
+.panel-title-row h3 {
+  font-size: 2rem;
+  color: var(--text-abyssal);
+}
+
+.panel-title-row p {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.panel-concentration {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--text-abyssal);
+}
+
+/* Meter progress bar */
+.meter-gauge-wrapper {
+  margin-bottom: 2.5rem;
+}
+
+.meter-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.meter-track {
+  height: 6px;
+  background-color: var(--bg-soft-blue);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  background-color: var(--text-abyssal);
+  border-radius: 3px;
+  transition: width 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Comparison Table */
+.comparison-card {
+  background-color: var(--bg-glacier);
+  border: 1px solid var(--bg-soft-blue);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 6px 15px rgba(11, 17, 22, 0.02);
+}
+
+.comparison-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  font-size: 0.85rem;
+}
+
+.comparison-row:not(:last-child) {
+  border-bottom: 1px solid var(--bg-soft-blue);
+}
+
+.comparison-row.header {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  padding-top: 0;
+}
+
+.comparison-row.target {
+  font-weight: 500;
+  color: var(--accent-gold-dark);
+}
+
+/* Detailed Info Grid */
+.mineral-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.detail-box h4 {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-abyssal);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-box p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.detail-box.full-width {
+  grid-column: span 2;
+  border-top: 1px solid var(--bg-soft-blue);
+  padding-top: 1.5rem;
+}
+
+/* --- GEOLOGICAL TIMELINE --- */
+.timeline-section {
+  background-color: var(--bg-frosted);
+  border-top: 1px solid var(--bg-soft-blue);
+}
+
+.timeline-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* Timeline vertical line */
+.timeline-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 1px;
+  height: 100%;
+  background-color: var(--accent-platinum);
+}
+
+.timeline-step {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.timeline-step:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--bg-glacier);
+  border: 1px solid var(--accent-platinum);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--text-abyssal);
+  z-index: 2;
+  flex-shrink: 0;
+  box-shadow: 0 10px 25px rgba(11, 17, 22, 0.03);
+  transition: var(--transition-smooth);
+}
+
+.timeline-step:hover .timeline-circle {
+  color: var(--bg-glacier);
+  background-color: var(--text-abyssal);
+  border-color: var(--text-abyssal);
+  transform: scale(1.05);
+}
+
+.timeline-content {
+  padding-top: 1.5rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.8rem;
+  color: var(--text-abyssal);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-meta {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--accent-gold-dark);
+  margin-bottom: 1rem;
+}
+
+.timeline-content p:last-child {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* --- TECHNICAL ANALYSIS --- */
+.analysis-section {
+  background-color: var(--bg-glacier);
+}
+
+.analysis-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.analysis-specs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 3rem;
+}
+
+.analysis-spec-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--bg-soft-blue);
+  padding-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.analysis-spec-item span:first-child {
+  color: var(--text-muted);
+}
+
+.analysis-spec-item span:last-child {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: var(--text-abyssal);
+}
+
+.analysis-visual {
+  background-color: var(--bg-frosted);
+  border: 1px solid var(--bg-soft-blue);
+  border-radius: 8px;
+  padding: 4rem 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 15px 35px rgba(11, 17, 22, 0.02);
+}
+
+.shield-pulse-icon {
+  color: var(--accent-gold-dark);
+  margin-bottom: 2rem;
+  animation: pulse-soft 3s infinite;
+}
+
+.analysis-visual h3 {
+  font-size: 1.8rem;
+  color: var(--text-abyssal);
+  margin-bottom: 1rem;
+}
+
+.analysis-visual p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .analysis-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .analysis-visual {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-active-panel {
+    padding: 1.5rem;
+  }
+  
+  .panel-title-row {
+    gap: 1rem;
+  }
+  
+  .chemical-symbol {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+  }
+  
+  .panel-title-row h3 {
+    font-size: 1.5rem;
+  }
+  
+  .panel-concentration {
+    font-size: 1.8rem;
+  }
+  
+  .mineral-details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .detail-box.full-width {
+    grid-column: span 1;
+  }
+  
+  .timeline-wrapper::before {
+    left: 30px;
+  }
+  
+  .timeline-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+  
+  .timeline-step {
+    gap: 1.5rem;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.4rem;
+  }
+}

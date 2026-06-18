@@ -1,0 +1,15 @@
+# Logs  
+logs  
+*.log  
+  
+# Dependency directories  
+node_modules/  
+  
+# Output/Build directories  
+dist/  
+  
+# Vite specific  
+.vite/  
+  
+# Process Manager / Temp files  
+processManager-*/ 
